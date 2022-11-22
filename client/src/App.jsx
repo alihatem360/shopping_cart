@@ -4,7 +4,7 @@ import Header from "./componets/Header/Header";
 import Footer from "./componets/Footer/Footer";
 import Product from "./componets/products/Product";
 import Filter from "./componets/Filter/Filter";
-import data from "../data.json";
+import data from "./data/data.json";
 function App() {
   const [products, setProducts] = useState(data);
   return (
