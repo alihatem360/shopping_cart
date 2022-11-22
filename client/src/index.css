@@ -17,7 +17,7 @@
     "main"
     "footer";
   height: 100vh;
-  grid-template-rows: 80px 1fr 80px;
+  grid-template-rows: 80px 1fr 40px;
 }
 
 .App-main {
