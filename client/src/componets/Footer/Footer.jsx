@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <h1>{words.footerTitle}</h1>
+        <h1>
+          <i class="fa-regular fa-registered"></i> {words.footerTitle}{" "}
+        </h1>
       </footer>
     </>
   );

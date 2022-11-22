@@ -1,0 +1,19 @@
+.filtter-wrapper {
+  width: 30%;
+  background-color: #121211;
+  height: 415px;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 15px;
+}
+.filtter-wrapper h2 {
+  background-color: #7d9cc4;
+  padding: 5px;
+  border-radius: 12px;
+  font-size: 30px;
+  text-align: center;
+}
+.filtter-wrapper > div {
+  padding: 12px;
+  margin: 12px;
+}

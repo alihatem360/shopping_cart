@@ -1,6 +1,6 @@
 header {
   grid-area: header;
-  background-color: #6b728e;
+  background-color: #141b39;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,4 +10,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: system-ui;
+  text-transform: uppercase;
 }

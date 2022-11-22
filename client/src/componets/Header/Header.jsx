@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <>
       <header>
-        <h1>{words.headerTitle}</h1>
+        <h1>
+          {words.headerTitle} <i class="fa-brands fa-shopify"></i>
+        </h1>
       </header>
     </>
   );
