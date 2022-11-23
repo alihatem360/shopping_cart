@@ -3,7 +3,7 @@ import Product from "../../componets/products/Product";
 import Filter from "../../componets/Filter/Filter";
 import data from "../../data/data.json";
 
-const mainPage = () => {
+const mainPage = ({ handelAddToCart }) => {
   const [products, setProducts] = useState(data);
   const [size, setSize] = useState("");
   const [sort, setSort] = useState("");
@@ -62,6 +62,7 @@ const mainPage = () => {
             FilterProducts={FilterProducts}
             NotFound={NotFound}
             size={size}
+            handelAddToCart={handelAddToCart}
           />
           <Filter
             handelSizeSelect={handelSizeSelect}

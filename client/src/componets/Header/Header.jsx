@@ -3,15 +3,17 @@ import "../../css/Header/Header.css";
 import { words } from "../../../words";
 import { Link } from "react-router-dom";
 import CartComponent from "../Cart/Cart";
-const Header = () => {
+const Header = ({ CartItemsSize }) => {
   return (
     <>
       <header>
         <h1>
-          {words.headerTitle} <i class="fa-brands fa-shopify"></i>
+          <Link to="/">
+            {words.headerTitle} <i class="fa-brands fa-shopify"></i>
+          </Link>
         </h1>
         <Link to="/cart">
-          <CartComponent />
+          <CartComponent CartItemsSize={CartItemsSize} />
         </Link>
       </header>
     </>

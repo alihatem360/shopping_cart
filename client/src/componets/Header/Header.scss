@@ -12,4 +12,10 @@ header {
   justify-content: center;
   font-family: system-ui;
   text-transform: uppercase;
+  a,
+  a:hover {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
 }

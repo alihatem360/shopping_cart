@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-const Card_Utilitie = ({ product }) => {
+const Card_Utilitie = ({ product, handelAddToCart }) => {
   return (
     <>
       <div class="card" className="bg-secondary m-2 " id="card">
@@ -14,6 +14,7 @@ const Card_Utilitie = ({ product }) => {
           </div>
           <h6 class="card-text">{product.description}</h6>
 
+          {/* LOOP IN SIZE */}
           <div className="py-2">
             {product.size.map((size, index) => {
               return <span class="badge bg-light mx-1 text-dark">{size}</span>;
@@ -21,7 +22,10 @@ const Card_Utilitie = ({ product }) => {
           </div>
           <div className="row">
             <div className="col-12">
-              <button className="btn btn-warning w-100">
+              <button
+                className="btn btn-warning w-100"
+                onClick={() => handelAddToCart(product)}
+              >
                 Add to Card <i class="fa-solid fa-cart-plus"></i>
               </button>
             </div>

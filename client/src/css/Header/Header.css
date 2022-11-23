@@ -13,3 +13,9 @@ header {
   font-family: system-ui;
   text-transform: uppercase;
 }
+header a,
+header a:hover {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
