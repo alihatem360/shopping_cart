@@ -1,7 +1,8 @@
 import React from "react";
 import "./index.css";
 import ModalComp from "../../componets/Modal/Modal";
-import Fade from "react-reveal/Fade";
+//use require to import the module
+// const Fade = require("react-reveal/Fade");
 const CartPage = ({ CartItems, handelRemoveFromCart }) => {
   return (
     <>
@@ -24,34 +25,34 @@ const CartPage = ({ CartItems, handelRemoveFromCart }) => {
             {CartItems.map((item) => {
               return (
                 <>
-                  <Fade left cascade>
-                    <tr>
-                      <th scope="row">{item.id}</th>
-                      <td>
-                        <img src={item.image} alt="" />
-                      </td>
-                      <td>{item.name}</td>
-                      <td>{item.description}</td>
-                      <td>{item.qty}</td>
-                      <td>
-                        <span
-                          className="
+                  {/* <Fade left cascade> */}
+                  <tr>
+                    <th scope="row">{item.id}</th>
+                    <td>
+                      <img src={item.image} alt="" />
+                    </td>
+                    <td>{item.name}</td>
+                    <td>{item.description}</td>
+                    <td>{item.qty}</td>
+                    <td>
+                      <span
+                        className="
                         badge  bg-success"
-                        >
-                          {item.price * item.qty}{" "}
-                          <i class="fa-solid fa-dollar-sign"></i>
-                        </span>
-                      </td>
-                      <td>
-                        <button
-                          className="btn btn-danger"
-                          onClick={() => handelRemoveFromCart(item)}
-                        >
-                          Remove <i class="fa-solid fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </Fade>
+                      >
+                        {item.price * item.qty}{" "}
+                        <i class="fa-solid fa-dollar-sign"></i>
+                      </span>
+                    </td>
+                    <td>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => handelRemoveFromCart(item)}
+                      >
+                        Remove <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  {/* </Fade> */}
                 </>
               );
             })}

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/Header/Header.css";
-import { words } from "../../../words";
+import { words } from "../../data/words";
 import { Link } from "react-router-dom";
 import CartComponent from "../Cart/Cart";
 const Header = ({ CartItemsSize }) => {
