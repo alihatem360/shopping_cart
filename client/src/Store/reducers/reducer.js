@@ -1,5 +1,7 @@
-const reducer = (state = {}, action) => {
-  return state;
-};
+import { combineReducers } from "redux";
 
-export default reducer;
+import { productReducer } from "./producsReducer";
+
+export default combineReducers({
+  products: productReducer,
+});

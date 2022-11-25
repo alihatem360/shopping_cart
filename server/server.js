@@ -6,7 +6,7 @@ const router = require("./routes/productRouters");
 const app = express();
 
 app.use(bodyParser.json());
-app.use("/", router);
+app.use("/api/v1", router);
 
 // DB Config
 const dbUrlString = "mongodb://localhost:27017/react-shopping-cart";
@@ -19,4 +19,6 @@ mogoose
 
 // listen to port
 
-app.listen(5000, () => console.log("server started at http://localhost:5000"));
+app.listen(5000, () => {
+  console.log("Server started at http://localhost:5000");
+});

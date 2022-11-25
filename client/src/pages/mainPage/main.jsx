@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Product from "../../componets/products/Product";
 import Filter from "../../componets/Filter/Filter";
 import data from "../../data/data.json";
-
+import axioc from "axios";
 const mainPage = ({ handelAddToCart }) => {
   const [products, setProducts] = useState(data);
   const [size, setSize] = useState("");
@@ -52,6 +52,13 @@ const mainPage = ({ handelAddToCart }) => {
       setFilterProductsSize(productClone.length);
     }
   };
+
+  // useEffect(() => {
+  //   axioc.get("/api/v1/products").then((res) => {
+  //     setProducts(res.data);
+  //     console.log(res.data, "res.data");
+  //   });
+  // }, []);
 
   return (
     <>
