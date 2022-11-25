@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./componets/Header/Header";
 import Footer from "./componets/Footer/Footer";
-import CartComponent from "./componets/Cart/Cart";
 import CartPage from "./pages/cartPage";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/mainPage/main";
-import data from "./data/data.json";
-
+//  import redux store
+import Store from "./Store/Store";
+import { Provider } from "react-redux";
 function App() {
   const [CartItems, setCartItems] = useState(
     JSON.parse(localStorage.getItem("CartItems")) || []
@@ -57,25 +57,27 @@ function App() {
   }, [CartItems, CartItemsSize]);
   return (
     <>
-      <div className="App">
-        <Header CartItemsSize={CartItemsSize} />
-        <Routes>
-          <Route
-            path="/"
-            element={<MainPage handelAddToCart={handelAddToCart} />}
-          />
-          <Route
-            path="/cart"
-            element={
-              <CartPage
-                CartItems={CartItems}
-                handelRemoveFromCart={handelRemoveFromCart}
-              />
-            }
-          />
-        </Routes>
-        <Footer />
-      </div>
+      <Provider store={Store}>
+        <div className="App">
+          <Header CartItemsSize={CartItemsSize} />
+          <Routes>
+            <Route
+              path="/"
+              element={<MainPage handelAddToCart={handelAddToCart} />}
+            />
+            <Route
+              path="/cart"
+              element={
+                <CartPage
+                  CartItems={CartItems}
+                  handelRemoveFromCart={handelRemoveFromCart}
+                />
+              }
+            />
+          </Routes>
+          <Footer />
+        </div>
+      </Provider>
     </>
   );
 }
