@@ -1,8 +1,6 @@
 import React from "react";
-
 import "./../../css/Filter/Filter.css";
-//use require to import the module
-// const Fade = require("react-reveal/Fade");
+
 const Filter = (props) => {
   return (
     <>
