@@ -18,13 +18,15 @@ function App() {
 
   const handelAddToCart = (product) => {
     const productClone = [...CartItems];
+    // check if the product is already in the cart
     const productIndex = productClone.findIndex(
       (item) => item.id === product.id
     );
-
+    //  if the product is already in the cart
     if (productIndex === -1) {
       productClone.push({ ...product, qty: 1 });
     } else {
+      // if the product is not in the cart
       productClone[productIndex].qty++;
     }
     // setCartItems(productClone) // this is the same as the next line
